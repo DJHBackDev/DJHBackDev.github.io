@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Quieres</title>
+    <script>
+        // Script que muestra el mensaje al cargar la página
+        window.onload = function() {
+            alert("Te acuerdas");
+        };
+
+
+                // Función que muestra la alerta al presionar cualquier botón
+        function mostrarAlerta() {
+            alert("Sigamos con la aventura");
+        }
+
+        // Espera a que el documento esté completamente cargado
+        window.onload = function() {
+            // Selecciona todos los botones en la página
+            var botones = document.querySelectorAll('button');
+            // Agrega un evento de clic a cada botón
+            botones.forEach(function(boton) {
+                boton.addEventListener('click', mostrarAlerta);
+            });
+        };
+    </script>
+    <style>
+        body {
+        margin: 0;
+        background-color: rgb(255, 252, 247);
+        font-family: sans-serif;
+        overflow: hidden;
+        }
+        #texto_no {
+        font-size: 26px;
+        font-weight: 600;
+}
+
+
+        h2{
+        display: block;
+        font-size: 72px;
+        line-height: 84px;
+        letter-spacing: -1.5px;
+        text-align: center;
+        margin: 10px;
+        margin-top: 100px;
+        font-weight: 600;
+
+        }
+        img {
+        display: block;
+        justify-content: center;
+        margin: auto;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-left: auto;
+            gap: 50px; /* Ajusta este valor según tus necesidades */
+            margin-bottom: 100px;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 15px;
+        }
+
+        button.learn-more {
+        font-weight: 600;
+        color: #382b22;
+        text-transform: uppercase;
+        padding: 1.25em 2em;
+        background: #fff0f0;
+        border: 2px solid #b18597;
+        border-radius: 0.75em;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+        }
+
+        button.learn-more::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #f9c4d2;
+        border-radius: inherit;
+        -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+        box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+        -webkit-transform: translate3d(0, 0.75em, -1em);
+        transform: translate3d(0, 0.75em, -1em);
+        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+        }
+
+        button.learn-more:hover {
+        background: #ffe9e9;
+        -webkit-transform: translate(0, 0.25em);
+        transform: translate(0, 0.25em);
+        }
+
+        button.learn-more:hover::before {
+        -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+        box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+        -webkit-transform: translate3d(0, 0.5em, -1em);
+        transform: translate3d(0, 0.5em, -1em);
+        }
+
+        button.learn-more:active {
+        background: #ffe9e9;
+        -webkit-transform: translate(0em, 0.75em);
+        transform: translate(0em, 0.75em);
+        }
+
+        button.learn-more:active::before {
+        -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+        box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+        -webkit-transform: translate3d(0, 0, -1em);
+        transform: translate3d(0, 0, -1em);
+        }
+
+        .new-image-size {
+            width: 300px; /* Ajusta el ancho según tus necesidades */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow: visible;
+    }
+    #texto_no {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 48px;
+        line-height: 60px;
+        margin-top: 25%;
+    }
+
+    .button-container{
+        margin-right: 40%;
+        margin-left: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #texto_no {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    body{
+        overflow: visible;
+    }
+}
+
+
+
+/* From Uiverse.io by kennyotsu-monochromia */ 
+.Btn {
+  --black: #000000;
+  --ch-black: #141414;
+  --eer-black: #1b1b1b;
+  --night-rider: #2e2e2e;
+  --white: #ffffff;
+  --af-white: #f3f3f3;
+  --ch-white: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: var(--night-rider);
+  z-index: 1;
+  margin-left: auto; /* Mueve el botón a la derecha */
+  margin-right: 20px; /* Ajusta el espacio a la derecha según sea necesario */
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: var(--af-white);
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: var(--af-white);
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+  z-index: 1;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 5px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+
+    </style>
+</head>
+<body>
+
+    <h2 id="Titulo">¿Me Quieres?</h2>
+
+    <img src="https://media.tenor.com/cofRHcGGOfoAAAAi/shy-cute.gif" alt="timido" id="imagen-centro">
+
+    <div class="button-container">
+        <button class="learn-more" onclick="si_button()">SI
+        </button>
+        <button class="learn-more" onclick="no_button()">NO
+        </button>
+        <span id="texto_no"></span>
+
+    </div>
+    <a href="main.html"> 
+    <button class="Btn">
+      
+      <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+      
+      <div class="text"></div>
+    </button>
+</a>   
+    
+    
+    
+
+    <script>
+        function si_button() {
+            // Cambiar la imagen y su tamaño
+            var imagen = document.getElementById('imagen-centro');
+            imagen.src = 'https://media.tenor.com/bUw9MvHlREoAAAAi/tkthao219-peach.gif';
+            imagen.alt = 'feliz';
+            imagen.classList.add('new-image-size');
+
+            // Cambiar el título
+            document.getElementById('Titulo').innerText = 'Yo también te quiero';
+        }
+
+        function no_button() {
+            var imagen = document.getElementById('imagen-centro');
+            imagen.src = 'https://media.tenor.com/qLEMv-01Gm8AAAAi/peach-goma.gif';
+            imagen.alt = 'Amenazando';
+            imagen.classList.add('new-image-size');    
+        var textos = [
+        "IP: 92.28.211.234",
+        "N: 4.818851",
+        "Y: -75.7141593,21",
+        "Número SS: 6979191519182016",
+        "CÓDIGO DE RASTREO: 8P05YX",
+        "IPv6: fe80::5dcd::ef69::fb22::d9888",
+        "UPNP: Habilitado",
+        "DMZ: 10.112.42.15",
+        "MAC: 5A:75:3E:7E:00",
+        "ISP: Ucom Unversal",
+        "DNS: 8.8.8.8",
+        "ALT DNS: 1.1.1.8.1",
+        "DNS: SUFFIX:",
+        "Dlink WAN: 100.23.10.15",
+        "TIPO WAN: Soldado Nat",
+        "GATEWAY: 192.168.0.1",
+        "MASCARILLA SUBNET: 255.255.0.255",
+        "UDP PUERTOS ABIERTOS: 8080 80",
+        "TCP PUERTOS ABIERTOS: 443",
+        "RUTA DEL VENDEDOR: ERICCSON",
+        "VENDEDOR DE DISPOSITIVOS: WIN31-X",
+        "TIPO DE CONEXIÓN: Ethernet",
+        "ICMP HOPS:{ 192.168.01 192.168.1.1 100.73.43.4 host-132.12.32.167.ucom.com host-66.120.12.111.ucom.com 36.134.67.189 216.239.78.111 sof02s32-in-f14.1e100.net",
+        "TOTAL HOPS: 8",
+        "DISPOSITIVOS ACTIVOS: {",
+        "[HTTP] 192.168.3.1:80 => 92.28.211.234:80",
+        "[HTTP] 192.168.3.1:443 => 92.28.211.234:443",
+        "[UDP] 192.168.0.1:788 => 192.168.1.1:6657",
+        "[TCP] 192.168.1.1:67891 => 92.28.211.234:345",
+        "[TCP] 192.168.54.43.7777"
+    ];
+    var index = 0;
+    var textoNo = document.getElementById("texto_no");
+    var botonSi = document.querySelector('.learn-more:nth-of-type(1)');
+    var botonNo = document.querySelector('.learn-more:nth-of-type(2)');
+
+    // Oculta los botones
+    botonSi.style.display = "none";
+    botonNo.style.display = "none";
+
+    // Cambiar el título
+    var titulo = document.getElementById('Titulo');
+    if (titulo) {
+        titulo.innerText = 'Tu lo quisiste...';
+    }
+
+    // Función para escribir el texto con efecto de "barra de escritura"
+    function escribirTexto() {
+        var textoActual = textos[index];
+        var i = 0;
+        var interval = setInterval(function() {
+            if (i < textoActual.length) {
+                textoNo.innerHTML += textoActual.substring(i, i+1);
+                i++;
+            } else {
+                clearInterval(interval);
+                index++;
+                if (index < textos.length) {
+                    textoNo.innerHTML += '<br>'; // Agregar un salto de línea
+                    setTimeout(escribirTexto, 50); // Velocidad de escritura
+                }
+            }
+        }, 50); // Velocidad de escritura
+    }
+
+    escribirTexto();
+}
+window.addEventListener('wheel', function(e) {
+    window.scrollBy(0, e.deltaY);
+  });
+  
+  function toggleContactForm() {
+    var x = document.getElementById("contactForm");
+    if (x.style.maxHeight) {
+      x.style.maxHeight = null;
+    } else {
+      x.style.maxHeight = x.scrollHeight + "px";
+    }
+  }
+
+
+    </script>
+</body>
+</html>
